@@ -1,20 +1,19 @@
 #!/bin/bash
 #
-# Copyright (C) 2023 sirNewbies
 #
 
 # init
 WORK_DIR=$(pwd)
 ANYKERNEL="${$WORK_DIR}/anykernel"
-ANYKERNEL_REPO="https://github.com/sirnewbies/Anykernel3.git" 
-ANYKERNEL_BRANCH="topaz"
-KERNEL_DIR="topaz"
+ANYKERNEL_REPO="https://github.com/Steyhist/Anykernel3.git" 
+ANYKERNEL_BRANCH="master"
+KERNEL_DIR="master"
 
 # VERSIONING
 KSU="ksu"
 NKSU="non-ksu"
 REL="v1.6"
-KERNEL="QuantumCharge-topaz-tapas-xun-$REL-$KSU"
+KERNEL="Steyhist-$REL-$KSU"
 ZIPNAME=$KERNEL.zip
 KERN_IMG=$WORK_DIR/out/android13-5.15/dist/Image
 
@@ -52,7 +51,7 @@ function pack_kernel() {
 
     TELEGRAM_FOLDER="${HOME}"/workspaces/telegram
     if ! [ -d "${TELEGRAM_FOLDER}" ]; then
-        git clone https://github.com/sirnewbies/telegram.sh/ "${TELEGRAM_FOLDER}"
+        git clone https://github.com/Steyhist/tele.sh "${TELEGRAM_FOLDER}"
     fi
 
     TELEGRAM="${TELEGRAM_FOLDER}"/telegram
