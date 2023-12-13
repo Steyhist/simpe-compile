@@ -1,5 +1,3 @@
-![other](https://github.com/Anothermi1/script-compile/raw/main/banner.png)
-
 # Termux dependency
 
 ```sudo su```
