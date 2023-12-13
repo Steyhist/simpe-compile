@@ -20,7 +20,7 @@ function clean() {
 }
 
 function build_kernel() {
-    export PATH="/home/romiyusnandar/toolchains/proton-clang/bin:$PATH"
+    export PATH="$HOME/toolchains/proton-clang/bin:$PATH"
     make -j$(nproc --all) O=out ARCH=arm64 <DEVICE>_defconfig
     make -j$(nproc --all) ARCH=arm64 O=out \
                           CC=clang \
