@@ -1,5 +1,4 @@
 #!/bin/bash
-# Copyright cc 2023 sirnewbies
 
 # setup color
 red='\033[0;31m'
