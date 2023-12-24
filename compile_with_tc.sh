@@ -18,9 +18,11 @@ function clean() {
     rm -rf out
 }
 
+#If you use another device change the X00TD_defconfig to ur device codename
+
 function build_kernel() {
     export PATH="$HOME/toolchains/proton-clang/bin:$PATH"
-    make -j$(nproc --all) O=out ARCH=arm64 <DEVICE>_defconfig
+    make -j$(nproc --all) O=out ARCH=arm64 X00TD_defconfig
     make -j$(nproc --all) ARCH=arm64 O=out \
                           CC=clang \
                           CROSS_COMPILE=aarch64-linux-gnu- \
