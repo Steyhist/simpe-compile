@@ -17,12 +17,14 @@ function clean() {
     rm -rf out
 }
 
+#If you use another device change the X00TD_defconfig to ur device codename
+
 function build_kernel() {
     echo -e "\n"
     echo -e "$yrllow << building kernel >> \n$white"
     echo -e "\n"
 
-    make -j$(nproc --all) O=out ARCH=arm64 <DEVICE>_defconfig
+    make -j$(nproc --all) O=out ARCH=arm64 X00TD_defconfig
     make -j$(nproc --all) ARCH=arm64 O=out \
                           CROSS_COMPILE=aarch64-linux-gnu- \
                           CROSS_COMPILE_ARM32=arm-linux-gnueabi-
