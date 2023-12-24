@@ -8,6 +8,9 @@ ANYKERNEL="${$WORK_DIR}/anykernel"
 ANYKERNEL_REPO="https://github.com/Steyhist/Anykernel3.git" 
 ANYKERNEL_BRANCH="master"
 KERNEL_DIR="master"
+CHAT_ID=""
+TELECHAT=""  # Group/channel chatid (use rose/userbot to get it)
+BOT_TOKEN="" # Get from botfather
 
 # VERSIONING
 KSU="ksu"
@@ -18,9 +21,9 @@ ZIPNAME=$KERNEL.zip
 KERN_IMG=$WORK_DIR/out/android13-5.15/dist/Image
 
 # setup telegram
-CHATIDQ="-1001930168269"
-CHATID="-1001930168269" # Group/channel chatid (use rose/userbot to get it)
-TELEGRAM_TOKEN="5136791856:AAGY5TeaVoeJbd6a2BAlxAjOc-MFWOJzZds" # Get from botfather
+CHATIDQ="$CHAT_ID"
+CHATID="$TELECHAT"
+TELEGRAM_TOKEN="$BOT_TOKEN"
 
 # setup color
 red='\033[0;31m'
